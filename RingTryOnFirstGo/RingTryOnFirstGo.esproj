@@ -24,14 +24,13 @@ viewConfig:
   cameraType: Back
 metaInfo:
   hints:
-    []
+    - lens_hint_show_your_hand
   tags:
     []
   lensName: Untitled
   lensDescriptors:
     []
   lensApplicability:
-    - Front
     - Back
   lensClientCompatibilities:
     - Mobile
@@ -41,7 +40,7 @@ metaInfo:
   videoPreviewHash: ""
   fromTemplateName: Default
   fromTemplateUrl: Lens Studio 5.12.1.25080420
-  activationCamera: Front
+  activationCamera: Rear
   sourceMapEnabled: false
   usingMinClientVersions: false
   androidMinClientVersion:
