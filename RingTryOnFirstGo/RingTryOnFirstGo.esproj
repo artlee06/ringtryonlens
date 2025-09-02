@@ -27,17 +27,17 @@ metaInfo:
     - lens_hint_show_your_hand
   tags:
     []
-  lensName: Untitled
+  lensName: Ring Try On
   lensDescriptors:
-    []
+    - GEN_AI_ICON
   lensApplicability:
     - Back
   lensClientCompatibilities:
     - Mobile
     - Web
   platformBundlesEnabled: false
-  iconHash: ""
-  videoPreviewHash: ""
+  iconHash: 156d409aa82e327631a9e19adb2087f5
+  videoPreviewHash: 455aa28016dacafd98e619f31fa5bfd1
   fromTemplateName: Default
   fromTemplateUrl: Lens Studio 5.12.1.25080420
   activationCamera: Rear
