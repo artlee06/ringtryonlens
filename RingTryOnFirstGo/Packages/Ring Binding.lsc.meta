@@ -415,7 +415,7 @@
   ImporterName: LensCoreImporter
   PrimaryAsset: !<reference> 2a1830a6-8937-4f7e-8c1a-9d6c8ac81bcb
   PackageType: LegacyPackage
-  PackagePolicy: CannotBeUnpacked
+  LegacyPackagePolicy: CannotBeUnpacked
   ExtraData:
     {}
   AssetDataMap:
