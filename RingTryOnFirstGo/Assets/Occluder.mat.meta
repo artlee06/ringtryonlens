@@ -1,8 +1,8 @@
-- !<AssetImportMetadata/bc228d23-3d27-44b8-82de-e65dc6186c3f>
+- !<AssetImportMetadata/8afe8aec-34db-4776-b5f4-d865c24af510>
   ImportedAssetIds:
-    Scene: !<reference> 0a1ccb1a-fe88-4fbb-9883-e3af3c75fd99
-  ImporterName: SceneImporter
-  PrimaryAsset: !<reference> 0a1ccb1a-fe88-4fbb-9883-e3af3c75fd99
+    Material: !<reference> 9778fd67-ff7a-49a5-8854-bfc847b839c4
+  ImporterName: MaterialImporter
+  PrimaryAsset: !<reference> 9778fd67-ff7a-49a5-8854-bfc847b839c4
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:
