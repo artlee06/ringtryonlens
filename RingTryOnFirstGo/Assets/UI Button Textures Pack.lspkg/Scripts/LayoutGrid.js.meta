@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/3f31cc0f-8134-28e8-4dfb-d0f1c9025d67>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 37a8e85d-c594-44f8-8f8d-c9f8c365b636
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 37a8e85d-c594-44f8-8f8d-c9f8c365b636
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    AssetLibraryId: 5H1vjwlO9BzvKbI82IvVoD
+  AssetDataMap:
+    JavaScriptAsset: !<own> ed6c2697-60ca-4fb3-bcb6-85c412743c3c
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/ed6c2697-60ca-4fb3-bcb6-85c412743c3c>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 64934eb2-dbb2-41e1-b657-0667a7965145
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    additional: false
+    cellSize: false
+    childAlignment: false
+    columns: false
+    constraint: false
+    ignoreDisabled: false
+    initializeOnStart: false
+    paddings: false
+    resizeParent: false
+    rows: false
+    spacing: false
+    startAxis: false
+    startCorner: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - paddings: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      cellSize: !<Vec2> {x: 1.000000, y: 1.000000}
+      spacing: !<Vec2> {x: 0.000000, y: 0.000000}
+      startCorner: TOP_LEFT
+      startAxis: 0
+      childAlignment: MIDDLE_CENTER
+      constraint: 0
+      columns: 5
+      rows: 2
+      additional: false
+      initializeOnStart: true
+      resizeParent: false
+      ignoreDisabled: false
+  ScriptTypes:
+    -
+      {}

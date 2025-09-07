@@ -1,0 +1,33 @@
+- !<NativePackageDescriptor/fa47a764-6b22-4492-84a8-821091c71866>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 13
+    patch: 1
+    build: 25082904
+    type: Unset
+    buildFlavor: ""
+    timestamp: 0
+    commit: ""
+  Description: A texture pack of ui button textures. Try to use with UI Button custom component
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 73
+  ExportUid: e7ea76c1-1420-4784-a99e-6272cd9241da
+  ComponentUid: 280251fb-c65d-4acf-a88c-53b22c280863
+  PackagePolicy: CanBeUnpackedTransparent
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0
