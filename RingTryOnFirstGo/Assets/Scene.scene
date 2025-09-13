@@ -358,7 +358,7 @@
   PrefabRemaps:
     []
   Name: Right
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -1171,6 +1171,21 @@
   Components:
     - !<own> 64c4ea8c-6648-41f1-b438-12c6b4d9ad02
     - !<own> 23010dc5-5fa9-4579-99d8-d866ab4e91ec
+- !<SceneObject/27850dde-b8fe-4a13-a1f8-7c0a9c0c3e58>
+  PrefabRemaps:
+    []
+  Name: Ring_Mesh_SF
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 1.650000, z: 0.000000}
+    Rotation: {x: -90.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.750000, y: 0.750000, z: 0.750000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 43dde023-2a21-4e32-99f8-1122a5cdf088
 - !<SceneObject/285fa8d5-d4d5-4c12-8eac-c50bae28cac3>
   PrefabRemaps:
     []
@@ -1357,7 +1372,7 @@
     []
   Name: Screen Region
   Enabled: true
-  ScreenRegionType: FullFrame
+  ScreenRegionType: Capture
   ResizeWithKeyboard: false
 - !<SceneObject/3384361d-76c4-450c-872b-c6dc3e76a210>
   PrefabRemaps:
@@ -1898,6 +1913,26 @@
   Components:
     - !<own> f18cb0bd-342a-4d36-8ad9-ec11da3d72cc
     - !<own> 32d1fe1d-3afc-4074-bfed-e0add1cbfc83
+- !<RenderMeshVisual/43dde023-2a21-4e32-99f8-1122a5cdf088>
+  PrefabRemaps:
+    []
+  Name: Object_1
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 846510c4-6663-4e93-be66-85b69ae8dda9
+  Mesh: !<reference> b16ee581-ab0c-40dc-bb00-e03401b675d1
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<Image/4498fb13-7b94-4d8b-bcc1-e8ef3c5ffcfd>
   PrefabRemaps:
     []
@@ -2214,7 +2249,7 @@
 - !<ScriptComponent/5126dd6e-6e5e-489f-864f-b0c643a85c19>
   PrefabRemaps:
     []
-  Name: Untitled JavaScript
+  Name: ToggleColors
   Enabled: true
   ScriptAsset: !<reference> 079ad38c-a482-4e18-aee3-d3b988f7701e
   ScriptInputsDefault:
@@ -2226,7 +2261,8 @@
       materials: !<reference.Material[]>
         - !<reference> 846510c4-6663-4e93-be66-85b69ae8dda9
         - !<reference> d4894859-90cd-4050-b731-ffc6b668e842
-      ringMesh: !<reference.RenderMeshVisual> d7688ebe-bf52-489c-a0b9-1249d97381fa
+        - !<reference> 440e33ff-dca4-41eb-b08b-b13d5610aaf4
+      ringMesh: !<reference.RenderMeshVisual> 43dde023-2a21-4e32-99f8-1122a5cdf088
       toggleButton: !<reference.ScriptComponent> 36e35a2f-b434-42e5-b6cd-ed3bb2827398
   ScriptTypes:
     "":
@@ -2370,6 +2406,7 @@
     HasSegmentScaleCompensation: false
   Children:
     - !<own> 7cba5184-fb80-4f4f-9cb7-9413cb97e3b9
+    - !<own> c66bbabc-308e-4be3-acd7-dc75a68b1943
   Components:
     - !<own> b9c0ba59-c133-49ec-a62e-12bd82aa003e
 - !<SceneObject/58ab2963-fb51-4c1d-a273-f7370a84f677>
@@ -2987,7 +3024,7 @@
   PrefabRemaps:
     []
   Name: diamonds
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3405,6 +3442,21 @@
     wrist_to_pinky: !<reference> 3ceff750-f108-4864-869f-9e62b9048669
     wrist_to_ring: !<reference> e7ad0b64-4cd3-468c-885f-fbeb454734fe
     wrist_to_thumb: !<reference> e0447b42-b570-431a-ba99-27faf3477d13
+- !<SceneObject/78bad02d-31c8-47d8-b9da-4a3cfa63673c>
+  PrefabRemaps:
+    []
+  Name: Diamond_SF
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 1.650000, z: 0.000000}
+    Rotation: {x: -90.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.750000, y: 0.750000, z: 0.750000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> de082035-f0cd-46e3-bbfa-c6122823fce2
 - !<Image/78fac5e9-875a-45a8-8433-be027d933d24>
   PrefabRemaps:
     []
@@ -3474,7 +3526,7 @@
   PrefabRemaps:
     []
   Name: classic diamond ring
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -40.000000}
@@ -3746,7 +3798,7 @@
   PrefabRemaps:
     []
   Name: ring.001
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -5969,6 +6021,22 @@
     []
   Components:
     []
+- !<SceneObject/c66bbabc-308e-4be3-acd7-dc75a68b1943>
+  PrefabRemaps:
+    []
+  Name: Ring.obj.cleaner.materialmerger.gles
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -40.000000}
+    Rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 78bad02d-31c8-47d8-b9da-4a3cfa63673c
+    - !<own> 27850dde-b8fe-4a13-a1f8-7c0a9c0c3e58
+  Components:
+    []
 - !<SceneObject/c6a50bd5-307a-4ddb-bc70-da3569ec631b>
   PrefabRemaps:
     []
@@ -6530,6 +6598,26 @@
     []
   Components:
     []
+- !<RenderMeshVisual/de082035-f0cd-46e3-bbfa-c6122823fce2>
+  PrefabRemaps:
+    []
+  Name: Object_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> f372b774-8fad-4cac-b92b-8856864e6320
+  Mesh: !<reference> 2c3b5bce-87a1-4f54-8d86-897a2358845c
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<SceneObject/dea7f0be-a896-49bd-8d7c-252920c1e108>
   PrefabRemaps:
     []
@@ -6736,10 +6824,10 @@
   Enabled: true
   IsAdvanced: false
   Constraints:
-    pinToLeft: true
-    pinToTop: true
-    pinToRight: true
-    pinToBottom: true
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
     fixedWidth: false
     fixedHeight: false
     deactivatedFixedSprite: false
@@ -6753,15 +6841,15 @@
   RawMode: true
   ForceBasic: true
   Anchor:
-    left: -1.000000
-    bottom: -1.000000
-    right: 1.000000
-    top: 1.000000
+    left: -0.861111
+    bottom: 0.765625
+    right: 0.861111
+    top: 0.921875
   Offset:
-    left: 50.000000
-    bottom: 1130.000000
-    right: -50.000000
-    top: -50.000000
+    left: -0.000004
+    bottom: 0.000000
+    right: 0.000004
+    top: 0.000000
 - !<ScreenTransform/e4d39002-2130-44c7-b96e-4a832f2fc0ca>
   PrefabRemaps:
     []
