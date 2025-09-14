@@ -1,0 +1,33 @@
+- !<NativePackageDescriptor/55bdb3c4-8b71-469a-9819-91556a49b991>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 13
+    patch: 1
+    build: 25082904
+    type: Unset
+    buildFlavor: ""
+    timestamp: 0
+    commit: ""
+  Description: "Gemstone Pack This pack contains models of 11 popular gemstone cuts including brilliant, emerald, princess, and pear. They all work great with the Gem Rendering Custom Component. Learn more here"
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 73
+  ExportUid: 423108ae-986c-422b-a663-764a12c6b32c
+  ComponentUid: 67cc5817-33e1-4197-bd71-991cc85b118a
+  PackagePolicy: CanBeUnpackedTransparent
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0

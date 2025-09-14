@@ -1,0 +1,43 @@
+- !<AssetImportMetadata/c6a9b981-7b33-4267-8bd0-6801f9b58af5>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 079ad38c-a482-4e18-aee3-d3b988f7701e
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 079ad38c-a482-4e18-aee3-d3b988f7701e
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> fd407d43-9a64-4027-b964-ccf3844fd27e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/fd407d43-9a64-4027-b964-ccf3844fd27e>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: fa4fc4a9-766d-4aa9-b397-9765cee6d93e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    materials: false
+    ringMesh: false
+    toggleButton: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - materials: !<reference.Material[]>
+        []
+      ringMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      toggleButton: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}

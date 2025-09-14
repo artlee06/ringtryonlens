@@ -1,0 +1,41 @@
+- !<AssetImportMetadata/a02a5340-09e9-4016-8ac4-9c7bf66a25ce>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 0b5f6da8-e326-4ec3-9b54-f403bb5f869c
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 0b5f6da8-e326-4ec3-9b54-f403bb5f869c
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 2a44f89b-9556-40bc-9747-14b53b32c0cc
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/2a44f89b-9556-40bc-9747-14b53b32c0cc>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 321d111d-06fb-4c35-8198-a39d2e0a96a9
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    diamonds: false
+    toggleButton: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - diamonds: !<reference.RenderMeshVisual[]>
+        []
+      toggleButton: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
