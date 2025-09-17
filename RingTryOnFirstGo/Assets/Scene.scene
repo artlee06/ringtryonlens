@@ -8,6 +8,7 @@
     - !<own> dff4f3c3-43f0-4bd2-b88d-87bf5487b486
     - !<own> 5781b01b-71ae-497e-a68c-540d02537d4b
     - !<own> 19a38b06-dce1-4bfd-abdf-dc8b9f561560
+    - !<own> 7bdf97d6-2c9a-4205-8e17-d5a5bcddf21e
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -2994,6 +2995,21 @@
     - !<own> 128f3c3b-b024-424c-a375-fe029fdffd67
   Components:
     []
+- !<SceneObject/7bdf97d6-2c9a-4205-8e17-d5a5bcddf21e>
+  PrefabRemaps:
+    []
+  Name: AdjustDiamondSize
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 96d5ee0f-9b0e-447e-a507-a5d9315fc123
 - !<SceneObject/7cba5184-fb80-4f4f-9cb7-9413cb97e3b9>
   PrefabRemaps:
     []
@@ -3500,6 +3516,28 @@
     - !<own> 515063fa-5f2d-48b2-92f7-8a8c54b77d69
   Components:
     []
+- !<ScriptComponent/96d5ee0f-9b0e-447e-a507-a5d9315fc123>
+  PrefabRemaps:
+    []
+  Name: AdjustDiamondSize
+  Enabled: true
+  ScriptAsset: !<reference> 17e088d8-3c35-484f-a557-c30185907e40
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      diamonds: !<reference.RenderMeshVisual[]>
+        - !<reference> 771db33a-050e-4afc-b19d-2d86c7850540
+        - !<reference> ed8ebff0-ebf9-49ae-918e-b79359497d35
+        - !<reference> 5a0e6bac-7eaf-4fde-af55-f815e756493a
+        - !<reference> 11976aca-5175-4e51-9c0b-dd024cf03be8
+        - !<reference> 0bca3291-1fda-4263-b4e9-aaec83c30d2c
+      colorPickerScript: !<reference.ScriptComponent> affdfa78-f35c-40f5-a1c1-675367416c96
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/97008b4d-7bc7-4b13-91b7-2b8c4cce5b5a>
   PrefabRemaps:
     []
@@ -4473,15 +4511,15 @@
   RawMode: true
   ForceBasic: true
   Anchor:
-    left: 0.700000
-    bottom: 0.200000
-    right: 0.700000
-    top: 0.200000
+    left: 0.800000
+    bottom: 0.120000
+    right: 0.800000
+    top: 0.120000
   Offset:
-    left: -13.999999
-    bottom: -250.000000
-    right: 14.000001
-    top: 250.000000
+    left: -15.999999
+    bottom: -270.000000
+    right: 16.000000
+    top: 270.000000
 - !<SceneObject/b3828818-41b0-46c2-b717-d091bb843f1b>
   PrefabRemaps:
     []

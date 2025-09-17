@@ -1,0 +1,41 @@
+- !<AssetImportMetadata/b453cd85-7bc8-4674-a7eb-c17ff5db8dd7>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 17e088d8-3c35-484f-a557-c30185907e40
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 17e088d8-3c35-484f-a557-c30185907e40
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 612547fc-26b4-4cd0-9bc7-dc186f6b9103
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/612547fc-26b4-4cd0-9bc7-dc186f6b9103>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: da65d0c6-1687-4578-ac1b-a7be6323fbef
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    colorPickerScript: false
+    diamonds: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - diamonds: !<reference.RenderMeshVisual[]>
+        []
+      colorPickerScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
