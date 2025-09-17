@@ -3,14 +3,15 @@
 //@input Component.Text caratText {"label":"Carat Screen Text (optional)"}
 //@input float minCarat = 0.25 {"widget":"slider","min":0.05,"max":5.0,"step":0.01}
 //@input float maxCarat = 3.00 {"widget":"slider","min":0.05,"max":10.0,"step":0.01}
+//@input float baselineCarat = 1.00 {"widget":"slider","min":0.05,"max":10.0,"step":0.01,"label":"Baseline Carat (model default)"}
 
-// Configurable scale range (feel free to adjust)
+// Legacy linear scale range (kept for fallback if needed)
 var MIN_SCALE = 0.5;
 var MAX_SCALE = 1.25;
 
 var originalLocalScales = [];
 var diamondsSceneObjects = [];
-var lastAppliedNorm = -1;
+var lastAppliedScale = -1;
 
 function initializeOriginalScales() {
     originalLocalScales = [];
@@ -35,22 +36,66 @@ function clamp01(v) {
     return Math.max(0.0, Math.min(1.0, v));
 }
 
-function applyScaleFromNorm(norm) {
+function lerp(a, b, t) {
+    return a + (b - a) * t;
+}
+
+// Approximate round brilliant diameter (mm) by carat using a lookup and linear interpolation
+// Sources vary; these are reasonable typical averages.
+var CARAT_TO_MM_TABLE = CARAT_TO_MM_TABLE || [
+    { c: 0.25, mm: 4.1 },
+    { c: 0.33, mm: 4.4 },
+    { c: 0.50, mm: 5.2 },
+    { c: 0.75, mm: 5.8 },
+    { c: 1.00, mm: 6.5 },
+    { c: 1.25, mm: 6.9 },
+    { c: 1.50, mm: 7.4 },
+    { c: 2.00, mm: 8.2 },
+    { c: 3.00, mm: 9.4 },
+    { c: 4.00, mm: 10.3 },
+    { c: 5.00, mm: 11.1 }
+];
+
+function caratToDiameterMm(carat) {
+    if (!CARAT_TO_MM_TABLE || CARAT_TO_MM_TABLE.length === 0) {
+        return 6.5; // safe default ~1ct
+    }
+    if (carat <= CARAT_TO_MM_TABLE[0].c) {
+        return CARAT_TO_MM_TABLE[0].mm;
+    }
+    for (var i = 0; i < CARAT_TO_MM_TABLE.length - 1; i++) {
+        var a = CARAT_TO_MM_TABLE[i];
+        var b = CARAT_TO_MM_TABLE[i + 1];
+        if (carat >= a.c && carat <= b.c) {
+            var t = (carat - a.c) / (b.c - a.c);
+            return lerp(a.mm, b.mm, t);
+        }
+    }
+    return CARAT_TO_MM_TABLE[CARAT_TO_MM_TABLE.length - 1].mm;
+}
+
+function computeScaleFromCarat(targetCarat, baselineCarat) {
+    if (!baselineCarat || baselineCarat <= 0) { baselineCarat = 1.0; }
+    var targetMm = caratToDiameterMm(targetCarat);
+    var baseMm = caratToDiameterMm(baselineCarat);
+    var ratio = targetMm / baseMm;
+    var minS = MIN_SCALE;
+    var maxS = MAX_SCALE;
+    if (maxS < minS) { var tmp = maxS; maxS = minS; minS = tmp; }
+    if (ratio < minS) { ratio = minS; }
+    if (ratio > maxS) { ratio = maxS; }
+    return ratio;
+}
+
+function applyUniformScale(scaleFactor) {
     if (originalLocalScales.length === 0 || diamondsSceneObjects.length === 0) {
         return;
     }
 
-    norm = clamp01(norm);
-    if (norm === lastAppliedNorm) {
+    if (scaleFactor === lastAppliedScale) {
         return; // avoid redundant work
     }
-    lastAppliedNorm = norm;
-
-    var minS = MIN_SCALE;
-    var maxS = MAX_SCALE;
-    if (maxS < minS) { var tmp = maxS; maxS = minS; minS = tmp; }
-
-    var scaleFactor = minS + (maxS - minS) * norm;
+    lastAppliedScale = scaleFactor;
 
     for (var i = 0; i < diamondsSceneObjects.length; i++) {
         var so = diamondsSceneObjects[i];
@@ -74,9 +119,11 @@ function readSlider() {
 }
 
 function updateFromPicker() {
-    var norm = readSlider();
-    applyScaleFromNorm(norm);
-    updateCaratText(norm);
+    var norm = clamp01(readSlider());
+    var carat = lerp(script.minCarat, script.maxCarat, norm);
+    var scaleFromCarat = computeScaleFromCarat(carat, script.baselineCarat);
+    applyUniformScale(scaleFromCarat);
+    updateCaratTextWithCarat(carat);
 }
 
 initializeOriginalScales();
@@ -90,14 +137,62 @@ if (script.colorPickerScript && script.colorPickerScript.onColorChanged) {
 updateFromPicker();
 
 
-function updateCaratText(norm) {
+function updateCaratTextWithCarat(carat) {
     if (!script.caratText) { return; }
-    norm = clamp01(norm);
-    var minC = script.minCarat;
-    var maxC = script.maxCarat;
-    if (maxC < minC) { var tmp = maxC; maxC = minC; minC = tmp; }
-    var carat = minC + (maxC - minC) * norm;
     var text = "~" + carat.toFixed(1) + " carat";
     script.caratText.text = text;
+}
+
+function lerp(a, b, t) {
+    return a + (b - a) * t;
+}
+
+// Approximate round brilliant diameter (mm) by carat using a lookup and linear interpolation
+// Sources vary; these are reasonable typical averages.
+var CARAT_TO_MM_TABLE = [
+    { c: 0.25, mm: 4.0 },
+    { c: 0.33, mm: 4.4 },
+    { c: 0.50, mm: 5.0 },
+    { c: 0.75, mm: 5.75 },
+    { c: 1.00, mm: 6.5 },
+    { c: 1.25, mm: 6.8 },
+    { c: 1.50, mm: 7.3 },
+    { c: 2.00, mm: 8.0 },
+    { c: 3.00, mm: 9.1 },
+    { c: 4.00, mm: 10.25 },
+    { c: 5.00, mm: 11.0 }
+];
+
+function caratToDiameterMm(carat) {
+    if (carat <= CARAT_TO_MM_TABLE[0].c) {
+        return CARAT_TO_MM_TABLE[0].mm;
+    }
+    for (var i = 0; i < CARAT_TO_MM_TABLE.length - 1; i++) {
+        var a = CARAT_TO_MM_TABLE[i];
+        var b = CARAT_TO_MM_TABLE[i + 1];
+        if (carat >= a.c && carat <= b.c) {
+            var t = (carat - a.c) / (b.c - a.c);
+            return lerp(a.mm, b.mm, t);
+        }
+    }
+    return CARAT_TO_MM_TABLE[CARAT_TO_MM_TABLE.length - 1].mm;
+}
+
+function computeScaleFromCarat(targetCarat, baselineCarat) {
+    // If baselineCarat equals targetCarat, scale should be 1.0
+    if (!baselineCarat || baselineCarat <= 0) { baselineCarat = 1.0; }
+
+    var targetMm = caratToDiameterMm(targetCarat);
+    var baseMm = caratToDiameterMm(baselineCarat);
+
+    var ratio = targetMm / baseMm;
+
+    // Optional clamp using legacy min/max as safety rails
+    var minS = MIN_SCALE;
+    var maxS = MAX_SCALE;
+    if (maxS < minS) { var tmp = maxS; maxS = minS; minS = tmp; }
+    if (ratio < minS) { ratio = minS; }
+    if (ratio > maxS) { ratio = maxS; }
+    return ratio;
 }
 

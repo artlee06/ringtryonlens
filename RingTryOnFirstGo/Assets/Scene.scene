@@ -3351,6 +3351,7 @@
       caratText: !<reference.Text> 84ac89a5-ca23-417c-a806-fed961b72135
       minCarat: 0.250000
       maxCarat: !<float> 3.000000
+      baselineCarat: !<float> 2.000000
   ScriptTypes:
     "":
       {}
@@ -4037,7 +4038,7 @@
   Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
-    Position: {x: 120.000000, y: 0.000000, z: -40.000000}
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
