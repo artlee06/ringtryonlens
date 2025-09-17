@@ -1,0 +1,97 @@
+- !<AssetImportMetadata/5cbd8fbf-a097-b132-fda7-d88a37f8c6ab>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 83a4b0ef-8eb9-4ece-88b3-f69f300eca02
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 83a4b0ef-8eb9-4ece-88b3-f69f300eca02
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 3fa4e4d5-5c4c-40f4-b514-29fb5f0e12e3
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<Image/024e88d3-da84-4b0c-a27e-a49f54819ea3>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 99e327b3-dc09-4e74-b19a-b37451f1a3d0
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefabAssetData/3fa4e4d5-5c4c-40f4-b514-29fb5f0e12e3>
+  SourceRemaps:
+    - 4ade39a9-8efd-47f0-880d-54a0ef76d336: 888bc769-cdec-4f65-a7b1-783f720e3f3d
+    - 75060a03-0ab9-499b-ae8f-d9f14822cc5a: 024e88d3-da84-4b0c-a27e-a49f54819ea3
+    - 83a4b0ef-8eb9-4ece-88b3-f69f300eca02: ed2aaa93-0fe9-4300-bda1-e89fb93d871d
+    - 8b7f17c1-2b82-4f2e-871c-5b86d24d584c: 9d2110e7-2cac-4e6d-923e-c74f33f8c7e9
+  SourceState: !<own> ed2aaa93-0fe9-4300-bda1-e89fb93d871d
+- !<ScreenTransform/888bc769-cdec-4f65-a7b1-783f720e3f3d>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -1.000000
+    bottom: -1.000000
+    right: 1.000000
+    top: 1.000000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000
+- !<SceneObject/9d2110e7-2cac-4e6d-923e-c74f33f8c7e9>
+  PrefabRemaps:
+    []
+  Name: Color Picker Palette
+  Enabled: true
+  Layers: 1048576
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 024e88d3-da84-4b0c-a27e-a49f54819ea3
+    - !<own> 888bc769-cdec-4f65-a7b1-783f720e3f3d
+- !<ObjectPrefab/ed2aaa93-0fe9-4300-bda1-e89fb93d871d>
+  PackagePath: Default Prefabs/Color Picker/Color Picker Palette
+  objects:
+    - !<own> 9d2110e7-2cac-4e6d-923e-c74f33f8c7e9
+  LazyLoading: false
+  RetainAssets: true

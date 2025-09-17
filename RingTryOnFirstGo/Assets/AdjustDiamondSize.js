@@ -1,9 +1,12 @@
 //@input Component.RenderMeshVisual[] diamonds
 //@input Component.ScriptComponent colorPickerScript
+//@input Component.Text caratText {"label":"Carat Screen Text (optional)"}
+//@input float minCarat = 0.25 {"widget":"slider","min":0.05,"max":5.0,"step":0.01}
+//@input float maxCarat = 3.00 {"widget":"slider","min":0.05,"max":10.0,"step":0.01}
 
 // Configurable scale range (feel free to adjust)
 var MIN_SCALE = 0.5;
-var MAX_SCALE = 1.5;
+var MAX_SCALE = 1.25;
 
 var originalLocalScales = [];
 var diamondsSceneObjects = [];
@@ -71,7 +74,9 @@ function readSlider() {
 }
 
 function updateFromPicker() {
-    applyScaleFromNorm(readSlider());
+    var norm = readSlider();
+    applyScaleFromNorm(norm);
+    updateCaratText(norm);
 }
 
 initializeOriginalScales();
@@ -83,4 +88,16 @@ if (script.colorPickerScript && script.colorPickerScript.onColorChanged) {
 
 // Apply once on start
 updateFromPicker();
+
+
+function updateCaratText(norm) {
+    if (!script.caratText) { return; }
+    norm = clamp01(norm);
+    var minC = script.minCarat;
+    var maxC = script.maxCarat;
+    if (maxC < minC) { var tmp = maxC; maxC = minC; minC = tmp; }
+    var carat = minC + (maxC - minC) * norm;
+    var text = "~" + carat.toFixed(1) + " carat";
+    script.caratText.text = text;
+}
 

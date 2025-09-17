@@ -1,0 +1,161 @@
+- !<AssetImportMetadata/9fa5c304-2e0e-58f8-18d3-14c3a08d0d07>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> bb75dba3-32e2-4013-a201-251c4332d166
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> bb75dba3-32e2-4013-a201-251c4332d166
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 6e6f2b0d-37c6-410a-91e5-b2586c473486
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/6e6f2b0d-37c6-410a-91e5-b2586c473486>
+  SvgIcon: |
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="22" cy="16" r="5" fill="#D0DAE6"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M27.6586 18C27.8797 17.3744 28 16.7013 28 16C28 15.2987 27.8797 14.6256 27.6586 14H29C30.1046 14 31 14.8954 31 16C31 17.1046 30.1046 18 29 18H27.6586ZM16.3414 18H4C2.89543 18 2 17.1046 2 16C2 14.8954 2.89543 14 4 14H16.3414C16.1203 14.6256 16 15.2987 16 16C16 16.7013 16.1203 17.3744 16.3414 18Z" fill="url(#paint0_linear_12_27)"/>
+    <defs>
+    <linearGradient id="paint0_linear_12_27" x1="4.27506" y1="16" x2="30.5" y2="16" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#EDDA64"/>
+    <stop offset="1" stop-color="#CB5468"/>
+    </linearGradient>
+    </defs>
+    </svg>
+
+  SetupScript:
+    code: ""
+  Description: |
+    UIColorPicker - Choose a color from a color palette and apply it to a Mesh Visual. 
+    Can also be configured as slider
+    // Manually enable interactable
+    // script.enableInteractable()
+    //
+    // Manually disable interactable
+    // script.disableInteractable()
+    
+    // Add or remove callback function to onColorChanged event, vec4 color parameter will be passed in to callback
+    // script.onColorChanged.add(callback)
+    // script.onColorChanged.remove(callback)
+    
+    // Add or remove callback function to onValueChanged event, float value parameter will be passed in to callback
+    // script.onValueChanged.add(callback)
+    // script.onValueChanged.remove(callback)
+    
+    // Add or remove callback function to onEnableInteractable event
+    // script.onEnableInteractable.add(callback)
+    // script.onEnableInteractable.remove(callback)
+    
+    // Add or remove callback function to onEnableInteractable event
+    // script.onDisableInteractable.add(callback)
+    // script.onDisableInteractable.remove(callback)
+    //
+    // True if interactable
+    // script.isInteractable()
+    //
+    // Enable touch events
+    // script.enableTouchEvents()
+    //
+    // Disable touch events
+    // script.disableTouchEvents()
+    //
+    // Get the current color selected on this Color Picker
+    // script.getColor()
+    //
+    // Get the current value (0-1) of this Color Picker's slider
+    // script.getSliderValue()
+    //
+    // Manually set the value (0-1) of this Color Picker's slider
+    // script.setSliderValue(value)
+    
+    // Manually set direction
+    // script.isVertical = value
+    // -----------------
+
+  VersionMajor: 8
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 0005ee8c-0e22-511b-0000-000000476385
+  ExportUid: e246ef50-f583-4071-a526-7e0d6117637e
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    brightness: false
+    callbackType: false
+    colorEnd: false
+    colorParameterName: false
+    colorRecipient: false
+    colorStart: false
+    cursorPrefab: false
+    customFunctionScript: false
+    disableTouchEventsInput: false
+    editAdvancedOptions: false
+    editConnections: false
+    editEventCallbacks: false
+    editPalette: false
+    editProperties: false
+    emptyColor: false
+    fillColor: false
+    initialPosition: false
+    interactable: false
+    onColorChangedBehaviors: false
+    onColorChangedFunctionNames: false
+    onColorChangedGlobalBehaviors: false
+    onValueChangedBehaviors: false
+    onValueChangedFunctionNames: false
+    onValueChangedGlobalBehaviors: false
+    orientation: false
+    palettePrefab: false
+    paletteType: false
+    printDebugStatements: false
+    printWarningStatements: false
+    renderOrderOverride: false
+    saturation: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - interactable: true
+      renderOrderOverride: 0
+      colorRecipient: !<reference.MaterialMeshVisual> 00000000-0000-0000-0000-000000000000
+      colorParameterName: baseColor
+      editProperties: true
+      initialPosition: 0.500000
+      orientation: horizontal
+      editPalette: true
+      paletteType: 0
+      brightness: !<float> 1.000000
+      saturation: !<float> 1.000000
+      colorStart: !<Vec4> {x: 0.999207, y: 0.988861, z: 0.016327, w: 1.000000}
+      colorEnd: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      fillColor: !<Vec4> {x: 0.937285, y: 0.933318, z: 0.941161, w: 1.000000}
+      emptyColor: !<Vec4> {x: 0.937285, y: 0.933318, z: 0.941161, w: 0.450004}
+      editEventCallbacks: false
+      callbackType: 0
+      onColorChangedBehaviors: !<reference.ScriptComponent[]>
+        []
+      onValueChangedBehaviors: !<reference.ScriptComponent[]>
+        []
+      onColorChangedGlobalBehaviors: !<string[]>
+        []
+      onValueChangedGlobalBehaviors: !<string[]>
+        []
+      customFunctionScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      onColorChangedFunctionNames: !<string[]>
+        []
+      onValueChangedFunctionNames: !<string[]>
+        []
+      editConnections: false
+      cursorPrefab: !<reference.ObjectPrefab> f6b7621a-f723-40bc-a433-fcded4a6d08b
+      palettePrefab: !<reference.ObjectPrefab> 83a4b0ef-8eb9-4ece-88b3-f69f300eca02
+      editAdvancedOptions: false
+      printDebugStatements: false
+      printWarningStatements: false
+      disableTouchEventsInput: false
+  ScriptTypes:
+    -
+      {}

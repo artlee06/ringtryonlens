@@ -1,0 +1,97 @@
+- !<AssetImportMetadata/7f602b8f-aa35-3b1e-f214-11d6b1fd94d6>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> f6b7621a-f723-40bc-a433-fcded4a6d08b
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> f6b7621a-f723-40bc-a433-fcded4a6d08b
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 7cdf2802-addc-4d40-80a0-9e2544b33b47
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/34eda53d-4172-4bf4-be8d-ffc6b4e7c5ce>
+  PrefabRemaps:
+    []
+  Name: Color PIcker Cursor
+  Enabled: true
+  Layers: 1048576
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> cc116c30-dd99-4f57-a349-132d2978d885
+    - !<own> 68975fd5-6eb0-4205-98fb-80f9bd554adf
+- !<Image/68975fd5-6eb0-4205-98fb-80f9bd554adf>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 8bdc0049-0711-44ca-84ed-17b00b7bb057
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefabAssetData/7cdf2802-addc-4d40-80a0-9e2544b33b47>
+  SourceRemaps:
+    - 87dd8346-aa5e-47be-9311-8d0e29748ecc: cc116c30-dd99-4f57-a349-132d2978d885
+    - 9b66061b-1aba-40c1-a65f-eff83876248c: 68975fd5-6eb0-4205-98fb-80f9bd554adf
+    - ef378b0f-cec0-458c-a0fd-01e245ffb14c: 34eda53d-4172-4bf4-be8d-ffc6b4e7c5ce
+    - f6b7621a-f723-40bc-a433-fcded4a6d08b: c6614eee-c765-452f-a3d1-8ab3621b2fc5
+  SourceState: !<own> c6614eee-c765-452f-a3d1-8ab3621b2fc5
+- !<ObjectPrefab/c6614eee-c765-452f-a3d1-8ab3621b2fc5>
+  PackagePath: Default Prefabs/Color Picker/Color PIcker Cursor
+  objects:
+    - !<own> 34eda53d-4172-4bf4-be8d-ffc6b4e7c5ce
+  LazyLoading: false
+  RetainAssets: true
+- !<ScreenTransform/cc116c30-dd99-4f57-a349-132d2978d885>
+  PrefabRemaps:
+    []
+  Name: Screen Transform
+  Enabled: true
+  IsAdvanced: false
+  Constraints:
+    pinToLeft: false
+    pinToTop: false
+    pinToRight: false
+    pinToBottom: false
+    fixedWidth: false
+    fixedHeight: false
+    deactivatedFixedSprite: false
+    deactivatedFixedPivot: false
+  Pivot: {x: 0.000000, y: 0.000000}
+  Transform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  RawMode: true
+  ForceBasic: true
+  Anchor:
+    left: -2.500000
+    bottom: -2.500000
+    right: 2.500000
+    top: 2.500000
+  Offset:
+    left: 0.000000
+    bottom: 0.000000
+    right: 0.000000
+    top: 0.000000

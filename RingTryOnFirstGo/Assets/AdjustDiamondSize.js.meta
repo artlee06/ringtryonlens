@@ -26,8 +26,11 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
+    caratText: false
     colorPickerScript: false
     diamonds: false
+    maxCarat: false
+    minCarat: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -36,6 +39,9 @@
     - diamonds: !<reference.RenderMeshVisual[]>
         []
       colorPickerScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      caratText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      minCarat: 0.250000
+      maxCarat: !<float> 3.000000
   ScriptTypes:
     -
       {}
